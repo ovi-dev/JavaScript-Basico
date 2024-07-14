@@ -35,7 +35,7 @@ consultarAPI()
 const consultarAPI2 = async () => {
     try {
         const inicio = performance.now()
-
+                            // con el Promise.all agrupas todas las promesas en una sola lo cual la hace mas rapida la respuesta 
         const [response, response2, response3] = await Promise.all([fetch(url), fetch(url2), fetch(url3)])
 
         const [data, data2, data3] = await Promise.all([response.json(), response2.json(), response3.json()])
